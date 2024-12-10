@@ -35,9 +35,9 @@
       max-width: 900px;
     }
 
-    /* Navigation Bar */
+    /* Navigation Bar with Light Blue Background */
     nav {
-      background-color: #333;
+      background-color: #a8dadc; /* Light Blue Background */
       padding: 10px 0;
       position: sticky;
       top: 0;
@@ -45,7 +45,7 @@
     }
 
     nav a {
-      color: white;
+      color: black; /* Black Text */
       text-decoration: none;
       padding: 14px 20px;
       font-size: 18px;
@@ -56,27 +56,6 @@
     nav a:hover {
       background-color: #575757;
       border-radius: 5px;
-    }
-
-    /* Button Styles */
-    #myBtn {
-      display: none;
-      position: fixed;
-      bottom: 20px;
-      right: 30px;
-      z-index: 99;
-      font-size: 18px;
-      border: none;
-      outline: none;
-      background-color: rgb(215, 255, 253);
-      color: black;
-      cursor: pointer;
-      padding: 15px;
-      border-radius: 4px;
-    }
-
-    #myBtn:hover {
-      background-color: #ffffff;
     }
 
     /* Content Styles */
@@ -103,12 +82,13 @@
 
 <body>
 
-  <!-- Navigation Bar -->
+  <!-- Navigation Bar with "Back to Top" Button -->
   <nav>
     <a href="#intro">Introduction</a>
     <a href="#video">Video</a>
     <a href="#facts">Facts</a>
-    <a href="#top" onclick="topFunction()">Top</a>
+    <a href="#final">Final Thoughts</a>
+    <a href="#top" onclick="topFunction()">Back to Top</a> <!-- "Back to Top" Button in Navbar -->
   </nav>
 
   <!-- Main Content -->
@@ -134,23 +114,26 @@
     </p>
   </section>
 
-  <!-- Scroll to Top Button -->
-  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <!-- New Final Thoughts Section -->
+  <section id="final">
+    <h2>Final Thoughts</h2>
+    <p>
+      Cats are much more than just pets; they are fascinating, complex animals that offer companionship, comfort, and joy. Whether you're watching them play, purring contently in your lap, or simply observing their curious nature, cats bring a sense of peace and happiness to our lives. They may have a reputation for being independent, but their ability to form bonds with their owners is undeniable. Embrace the unique quirks of your feline friend and enjoy the special relationship that you share.
+    </p>
+  </section>
 
   <!-- Footer -->
   <footer>
-    <p>Cats &copy; 2024</p>
+    <p>Cat World &copy; 2024</p>
   </footer>
 
   <script>
-    // Scroll to top button functionality
-    let mybutton = document.getElementById("myBtn");
+    // Function to scroll back to the top of the page when the "Back to Top" link is clicked
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
 
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-      } else {
-    
-
+</body>
+</html>
